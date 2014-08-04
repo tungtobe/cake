@@ -1,0 +1,66 @@
+2014-08-04 09:25:51 Error: [MissingActionException] Action PostsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'view',
+)
+Request URL: /cake/posts/view/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-04 09:26:31 Error: [MissingActionException] Action PostsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'view',
+)
+Request URL: /cake/posts/view/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-04 09:27:46 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/view.ctp',
+)
+Request URL: /cake/posts/view/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-04 09:27:57 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/view.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/view.ctp',
+)
+Request URL: /cake/posts/view/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-04 09:43:59 Error: Fatal Error (64): Cannot redeclare AppController::$components in [/Applications/XAMPP/xamppfiles/htdocs/cake/app/Controller/AppController.php, line 36]
+2014-08-04 09:44:00 Error: [FatalErrorException] Cannot redeclare AppController::$components
+Request URL: /cake/posts/index
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 36)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 36, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', '/Applications/X...', 36, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-04 09:45:32 Error: Fatal Error (1): Call to a member function setFlash() on a non-object in [/Applications/XAMPP/xamppfiles/htdocs/cake/app/Controller/PostsController.php, line 28]
+2014-08-04 09:45:32 Error: [FatalErrorException] Call to a member function setFlash() on a non-object
+Request URL: /cake/posts/add
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/X...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/X...', 28, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/X...', 28, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
