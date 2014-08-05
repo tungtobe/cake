@@ -1,6 +1,12 @@
 <?php
 
 class PostsController extends AppController {
+	var $paginate = array();
+
+	//Paging Normal 
+    function paging(){
+        
+    }
 
 	//declare user access right for Post Controller
 	public function isAuthorized($user) {
@@ -22,7 +28,12 @@ class PostsController extends AppController {
 
     //show all posts
     public function index() {
-       $this->set('posts', $this->Post->find('all'));
+       $this->paginate = array(
+                                'limit' => 2,
+                                'order' => array('id' => 'asc'),
+                             );
+        $data = $this->paginate("Post");
+        $this->set("posts",$data);
     }
 
     //view detail of a post

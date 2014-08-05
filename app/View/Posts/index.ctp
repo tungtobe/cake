@@ -1,8 +1,11 @@
 <h1>Blog posts</h1>
-<?php echo $this->Html->link(
-    'Add Post',
-    array('controller' => 'posts', 'action' => 'add')
-); ?>
+
+<?php
+    echo $this->Paginator->prev('« Previous ', null, null, array('class' => 'disabled')); //Shows the next and previous links
+    echo " | ".$this->Paginator->numbers()." | "; //Shows the page numbers
+    echo $this->Paginator->next(' Next »', null, null, array('class' => 'disabled')); //Shows the next and previous links
+    echo " Page ".$this->Paginator->counter(); // prints X of Y, where X is current page and Y is number of pages
+?>
 <table>
     <tr>
         <th>Id</th>
@@ -34,3 +37,8 @@
     <?php endforeach; ?>
     <?php unset($post); ?>
 </table>
+
+<?php echo $this->Html->link(
+    'Add Post',
+    array('controller' => 'posts', 'action' => 'add')
+); ?>
