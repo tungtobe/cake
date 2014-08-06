@@ -3,11 +3,6 @@
 class PostsController extends AppController {
 	var $paginate = array();
 
-	//Paging Normal 
-    function paging(){
-        
-    }
-
 	//declare user access right for Post Controller
 	public function isAuthorized($user) {
 	    // All registered users can add posts
@@ -34,6 +29,8 @@ class PostsController extends AppController {
                              );
         $data = $this->paginate("Post");
         $this->set("posts",$data);
+        var_dump($data);
+        die;
     }
 
     //view detail of a post
