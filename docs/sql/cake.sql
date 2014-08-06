@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 06, 2014 at 10:38 AM
+-- Generation Time: Aug 06, 2014 at 12:01 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -19,6 +19,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `cake`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cake_time`
+--
+
+CREATE TABLE IF NOT EXISTS `cake_time` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `time` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `cake_time`
+--
+
+INSERT INTO `cake_time` (`id`, `time`) VALUES
+(1, '2014-08-06 16:51:01'),
+(2, '2014-08-06 16:51:08');
 
 -- --------------------------------------------------------
 
