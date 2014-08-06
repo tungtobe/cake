@@ -30,7 +30,7 @@ class PostsController extends AppController {
     public function index() {
        $this->paginate = array(
                                 'limit' => 2,
-                                'order' => array('id' => 'asc'),
+                                'order' => array('id' => 'desc'),
                              );
         $data = $this->paginate("Post");
         $this->set("posts",$data);
@@ -47,6 +47,21 @@ class PostsController extends AppController {
             throw new NotFoundException(__('Invalid post'));
         }
         $this->set('post', $post);
+    }
+
+    //duplicate post
+    public function duplicate() {
+        if( $this->request->is('post') ){
+        	$id = $this->request->data['id'];
+        	$oldPost = $this->Post->findById($id);
+	        $newPost['Post']['title'] = $oldPost['Post']['title'] . " duplicate";
+	    	$this->Post->create();
+	    	$this->Post->save($newPost);
+	    	$this->autoRender = false;
+    		$this->layout = 'ajax';
+	  		$result = $this->Post->findById($this->Post->id);
+	  		return json_encode($result);
+	    }
     }
 
     //add new post
