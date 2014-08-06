@@ -1,7 +1,47 @@
-<h1>Add Post</h1>
-<?php
-echo $this->Form->create('Post');
-echo $this->Form->input('title');
-echo $this->Form->input('body', array('rows' => '3'));
-echo $this->Form->end('Save Post');
-?>
+<div class="posts form">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><?php echo __('Add Post'); ?></h1>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="col-md-3">
+			<div class="actions">
+				<div class="panel panel-default">
+					<div class="panel-heading">Actions</div>
+						<div class="panel-body">
+							<ul class="nav nav-pills nav-stacked">
+
+																<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;List Posts'), array('action' => 'index'), array('escape' => false)); ?></li>
+														</ul>
+						</div>
+					</div>
+				</div>			
+		</div><!-- end col md 3 -->
+		<div class="col-md-9">
+			<?php echo $this->Form->create('Post', array('role' => 'form')); ?>
+
+				<div class="form-group">
+					<?php echo $this->Form->input('title', array('class' => 'form-control', 'placeholder' => 'Title'));?>
+				</div>
+				<div class="form-group">
+					<?php echo $this->Form->input('body', array('class' => 'form-control', 'placeholder' => 'Body'));?>
+				</div>
+				<div class="form-group">
+					<?php echo $this->Form->input('user_id', array('class' => 'form-control', 'placeholder' => 'User Id'));?>
+				</div>
+				<div class="form-group">
+					<?php echo $this->Form->submit(__('Submit'), array('class' => 'btn btn-default')); ?>
+				</div>
+
+			<?php echo $this->Form->end() ?>
+
+		</div><!-- end col md 12 -->
+	</div><!-- end row -->
+</div>
