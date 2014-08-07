@@ -6,8 +6,8 @@
         <legend>
             <?php echo __('Please enter your username and password'); ?>
         </legend>
-        <?php echo $this->Form->input('username');
-        echo $this->Form->input('password');
+        <?php echo $this->Form->input('username'); echo "username mặc định: cake";
+        echo $this->Form->input('password');echo "pass mặc định: cake";
     ?>
     </fieldset>
 <?php echo $this->Form->end(__('Login')); ?>

@@ -46,8 +46,8 @@ class AppController extends Controller {
                 'action' => 'index'
             ),
             'logoutRedirect' => array(
-                'controller' => 'pages',
-                'action' => 'display',
+                'controller' => 'posts',
+                'action' => 'index',
                 'home'
             ),
             'authenticate' => array(
@@ -60,8 +60,7 @@ class AppController extends Controller {
 
 
 	public function beforeFilter() {
-        $this->Auth->allow('index', 'view');
-    }
+    }            
 
     public function isAuthorized($user) {
 	    // Admin can access every action

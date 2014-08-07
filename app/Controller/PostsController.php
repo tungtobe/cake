@@ -29,8 +29,6 @@ class PostsController extends AppController {
                              );
         $data = $this->paginate("Post");
         $this->set("posts",$data);
-        var_dump($data);
-        die;
     }
 
     //view detail of a post

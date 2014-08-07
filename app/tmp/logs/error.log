@@ -1000,3 +1000,154 @@ Request URL: /cake/user/login
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2014-08-07 09:11:32 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /cake/posts/delete/77
+Stack Trace:
+#0 [internal function]: PostsController->delete('77')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-07 09:19:35 Error: [MissingLayoutException] Layout file "/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/bootstrap.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/bootstrap.ctp',
+)
+Request URL: /cake/posts
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(510): View->_getLayoutFileName('bootstrap')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'bootstrap')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-08-07 09:21:48 Error: [MissingLayoutException] Layout file "/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/bootstrap.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/bootstrap.ctp',
+)
+Request URL: /cake/posts
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(510): View->_getLayoutFileName('bootstrap')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'bootstrap')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2014-08-07 09:23:06 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/Applications/XAMPP/xamppfiles/htdocs/cake/app/Controller/AppController.php, line 64]
+2014-08-07 09:23:06 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/Applications/XAMPP/xamppfiles/htdocs/cake/app/Controller/AppController.php, line 64]
+2014-08-07 09:23:06 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /cake/posts
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-07 09:23:06 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /cake/posts
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-07 09:23:08 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/Applications/XAMPP/xamppfiles/htdocs/cake/app/Controller/AppController.php, line 64]
+2014-08-07 09:23:08 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-07 09:23:12 Error: Fatal Error (4): syntax error, unexpected 'public' (T_PUBLIC) in [/Applications/XAMPP/xamppfiles/htdocs/cake/app/Controller/AppController.php, line 64]
+2014-08-07 09:23:12 Error: [FatalErrorException] syntax error, unexpected 'public' (T_PUBLIC)
+Request URL: /cake/users/logout
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Error/ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/X...', 64)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/X...', 64, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-07 09:34:49 Error: [MissingHelperException] Helper class authenHelper could not be found.
+Exception Attributes: array (
+  'class' => 'authenHelper',
+  'plugin' => false,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('authen')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(837): HelperCollection->__isset('authen')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/default.ctp(45): View->__get('authen')
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(948): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(910): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(542): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-08-07 09:35:31 Error: [MissingHelperException] Helper class authenHelper could not be found.
+Exception Attributes: array (
+  'class' => 'authenHelper',
+  'plugin' => false,
+)
+Request URL: /cake/posts/index/home
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('authen')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(837): HelperCollection->__isset('authen')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/default.ctp(45): View->__get('authen')
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(948): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(910): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(542): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-08-07 09:36:54 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(837): HelperCollection->__isset('Auth')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/default.ctp(45): View->__get('Auth')
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(948): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(910): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(542): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2014-08-07 09:37:02 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(837): HelperCollection->__isset('Auth')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Layouts/default.ctp(45): View->__get('Auth')
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(948): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(910): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(542): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#8 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

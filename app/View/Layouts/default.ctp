@@ -33,6 +33,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+
 		echo $this->Html->script("jquery-2.1.1.js");
 	?>
 </head>
@@ -40,6 +41,26 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<?php 
+			// if ($this->Session->read('Auth.User')){
+			// 	echo $this->Html->link('Logout',
+			//     	array('controller' => 'users', 'action' => 'logout')
+			// 	);
+			// }
+
+			// if ($this->Auth->user()) {
+			// 	echo $this->Html->link('Logout',
+			//     	array('controller' => 'users', 'action' => 'logout')
+			// 	);
+			// }
+			 ?>
+			 <?php if (AuthComponent::user('id')): ?>
+			   Logged in as <?= AuthComponent::user('username') ?>
+			<?php
+				echo $this->Html->link('Logout',
+			    	array('controller' => 'users', 'action' => 'logout')
+				); 
+			endif; ?>
 		</div>
 		<div id="content">
 
