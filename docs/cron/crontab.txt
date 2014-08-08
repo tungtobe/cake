@@ -1,1 +1,1 @@
-  */5  *    *    *    *  cd /Applications/XAMPP/htdocs/cake/app && cake gettime 
+  */5  *    *    *    *  /Applications/XAMPP/htdocs/cake/app/cake gettime 

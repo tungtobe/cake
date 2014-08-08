@@ -30,7 +30,7 @@
                 ); 
                   echo $this->Form->postLink('Delete',
                     array('action' => 'delete', $post['Post']['id']),
-                    array('confirm' => 'Are you sure?')
+                    array('confirmMessage' => 'Are you sure?')
                 );
             ?>
             

@@ -1151,3 +1151,78 @@ Stack Trace:
 #9 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #10 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2014-08-07 10:10:56 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/duplicate.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/duplicate.ctp',
+)
+Request URL: /cake/posts/duplicate
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-07 10:14:36 Error: [MethodNotAllowedException] Method Not Allowed
+Request URL: /cake/posts/delete/81
+Stack Trace:
+#0 [internal function]: PostsController->delete('81')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-07 10:27:05 Error: [MissingActionException] Action PostsController::posts() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'posts',
+)
+Request URL: /cake/posts/posts/duplicate
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-07 10:27:33 Error: [MissingActionException] Action PostsController::posts() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'posts',
+)
+Request URL: /cake/posts/posts/duplicate
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-07 10:28:20 Error: [MissingActionException] Action PostsController::posts() could not be found.
+Exception Attributes: array (
+  'controller' => 'PostsController',
+  'action' => 'posts',
+)
+Request URL: /cake/posts/posts/duplicate
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-08-07 10:43:15 Error: [MissingViewException] View file "/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/XAMPP/xamppfiles/htdocs/cake/app/View/Posts/delete.ctp',
+)
+Request URL: /cake/posts/delete/86
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Controller/Controller.php(954): View->render(NULL, NULL)
+#2 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(198): Controller->render()
+#3 /Applications/XAMPP/xamppfiles/htdocs/cake/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-08-08 23:41:33 Error: [MissingControllerException] Controller class PostController could not be found.
+Exception Attributes: array (
+  'class' => 'PostController',
+  'plugin' => NULL,
+)
+Request URL: /cake/post
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/cake/app/webroot/index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

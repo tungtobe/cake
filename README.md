@@ -1,43 +1,60 @@
-CakePHP
-=======
+#I. Báo cáo
+###Câu 1
+1. `$this->Post` là để chỉ lớp Post trong model. `$this` là chỉ class PostsController, Cake sẽ mặc định tự hiểu `$this->Post` là model `Post` vì Controller đã được đặt tên đúng theo convention của cake nên ko cần khai báo.
+2. Như câu 1, cake sẽ tự động hiểu class `Post` trong model sẽ tương tác với bảng `posts` trong Database và ở controller `PostsController` sẽ sử dụng được class Post mà ko cần khai báo, nếu các lớp được đặt tên đúng quy định:
+	* Tên bảng trong database được đặt dưới dạng số nhiều và ko viết hoa. VD: `posts`
+	* Tên file model cũng như tên class trong model được đặt dưới dạng số ít, viết hoa chữ cái đầu tiên. VD: `Post`
+	* Tên file controller cũng  như tên class được đặt dưới dạng số nhiều, viết hoa chữ cái đầu tiên và kèm hậu tố Controller ở sau. VD: `PostsController`
+	
+###Câu 2
+Trong Form của cake có các kiểu: `post`, `get`, `file`, `put` và `delete`. Nhưng `file`, `put`, `delete` có thể quy về dạng `post` nên có 2 dạng cơ bản chính là `post` và `get` 
 
-[![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
+###Câu 3
+Đối với các function Delete thì nên dùng phương thức `post`. Thông thường việc xác định các bản ghi hay đối tượng cần xóa thì xác định thông qua ID. Nếu sử dụng phương thức `get` thì id của đối tượng cần xóa sẽ hiện rõ trên đường link, điều này có thể gây ra một số vấn đề về bảo mật. 
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+###Câu 4
+Dâu `__` dùng để `quốc tế hóa ngôn ngữ trong ứng dụng của bạn`. Nó trả về một đoạn text đã được dịch nếu tìm thấy hoặc đoạn text gốc nếu ko tìm thấy.  
 
-Some Handy Links
-----------------
+> "Returns a translated string if one is found, or the submitted message if not found."
 
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
+[Link tham khảo bằng tiếng mẹ đẻ](http://www.i-php.net/2010/02/ngon-ngu-trong-cakephp.html)
 
-[CookBook](http://book.cakephp.org) - THE CakePHP user documentation; start learning here!
 
-[API](http://api.cakephp.org) - A reference to CakePHP's classes
+###Câu 5
+Các thao tác validate nên được cài đặt ở Model trong tổng quan mô hình MVC vì thành phần M (Model) là thành phần kết nối  trực tiếp với dữ liệu ở database. Model có chức năng save data của người dùng vào database và fetch data từ database gửi cho người dùng. Trước khi save hoặc trước khi fetch data thì chúng ta có thể kiểm tra tính hợp lệ của data đó.
 
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
+###Câu 6
+Muốn truyền thông báo từ controller ra view thường ra dùng Session với hàm `setFlash`. Hàm này thường được sử dụng trong controller . VD:
 
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
+	$this->Session->setFlash('Tại sao Codelover có ít gái thế @@', 'sms', array('class' => 'message'))
 
-[Community Center](http://community.cakephp.org) - A source for everything community related
+Session được sử dụng để quản lý phiên làm việc của người sử dụng như quản lý cơ chế chứng thực người dùng (đăng nhập), quản lý việc lưu nhớ thông tin ... Có những thành phần chỉ được khai báo trong $helpers như : Html,Form… , $component như : Acl,Mail.. . Tuy nhiên Session lại là trường hợp ngoại lệ , nó có thể khai báo trong cả hai thành phần $helpers và $components.
+###Câu 7
+`Helper` đối với View, cũng như `Component` . đối với Controller, `Behaviors` đối với Model
 
-[Training](http://training.cakephp.org) - Join a live session and get skilled with the framework
 
-[CakeFest](http://cakefest.org) - Don't miss our annual CakePHP conference
+###Câu 8
+	array(11) { [0]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(1) "1" ["title"]=> string(9) "The title" ["body"]=> string(22) "This is the post body." ["created"]=> string(19) "2014-08-04 10:15:10" ["modified"]=> NULL ["user_id"]=> NULL } } [1]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(1) "2" ["title"]=> string(18) "A title once again" ["body"]=> string(26) "And the post body follows " ["created"]=> string(19) "2014-08-04 10:15:10" ["modified"]=> string(19) "2014-08-04 10:58:51" ["user_id"]=> NULL } } [2]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(1) "3" ["title"]=> string(18) "Title strikes back" ["body"]=> string(29) "This is really exciting! Not." ["created"]=> string(19) "2014-08-04 10:15:10" ["modified"]=> NULL ["user_id"]=> NULL } } [3]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(1) "6" ["title"]=> string(6) "post 1" ["body"]=> string(15) "post 1 body v " ["created"]=> string(19) "2014-08-04 10:59:47" ["modified"]=> string(19) "2014-08-04 11:01:02" ["user_id"]=> string(1) "2" } } [4]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(1) "7" ["title"]=> string(5) "Post2" ["body"]=> string(12) "post2 body " ["created"]=> string(19) "2014-08-05 04:05:19" ["modified"]=> string(19) "2014-08-05 04:05:19" ["user_id"]=> string(1) "1" } } [5]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(2) "81" ["title"]=> string(15) "Post2 duplicate" ["body"]=> NULL ["created"]=> string(19) "2014-08-07 10:14:27" ["modified"]=> string(19) "2014-08-07 10:14:27" ["user_id"]=> NULL } } [6]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(2) "82" ["title"]=> string(15) "Post2 duplicate" ["body"]=> NULL ["created"]=> string(19) "2014-08-07 10:23:57" ["modified"]=> string(19) "2014-08-07 10:23:57" ["user_id"]=> NULL } } [7]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(2) "83" ["title"]=> string(25) "Post2 duplicate duplicate" ["body"]=> NULL ["created"]=> string(19) "2014-08-07 10:24:28" ["modified"]=> string(19) "2014-08-07 10:24:28" ["user_id"]=> NULL } } [8]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(2) "84" ["title"]=> string(19) "The title duplicate" ["body"]=> NULL ["created"]=> string(19) "2014-08-07 10:27:13" ["modified"]=> string(19) "2014-08-07 10:27:13" ["user_id"]=> NULL } } [9]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(2) "85" ["title"]=> string(29) "The title duplicate duplicate" ["body"]=> NULL ["created"]=> string(19) "2014-08-07 10:28:08" ["modified"]=> string(19) "2014-08-07 10:28:08" ["user_id"]=> NULL } } [10]=> array(1) { ["Post"]=> array(6) { ["id"]=> string(2) "87" ["title"]=> string(29) "The title duplicate duplicate" ["body"]=> NULL ["created"]=> string(19) "2014-08-07 10:31:24" ["modified"]=> string(19) "2014-08-07 10:31:24" ["user_id"]=> NULL } } }
+	
+###Câu 9
+Tổng thời gian: từ ngày 4/8/2014 tới ngày 8/8/2014
 
-[Cake Software Foundation](http://cakefoundation.org) - Promoting development related to CakePHP
+##II. Feedback
+### Về trình độ của người thực hiện bài training
 
-Get Support!
-------------
+####Trường hợp 1
+Với những người không biết một chút gì về lập trình web thì hẳn nhiên là sẽ chưa có kiến thức về Mysql cũng như Apache, vậy nên trong trường hợp này bài test thiếu một phần quan trọng là `tìm hiểu qua về mô hình client-server` cũng như `hệ quản trị cơ sở dữ liệu được dùng phổ biến Mysql trong lập trình web`
 
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake
+####Trường hợp 2 
+Với những người đã có kiến thức cơ bản về lập trình web thì em có một số ý kiến cá nhân như sau
 
-[Google Group](https://groups.google.com/group/cake-php) - Community mailing list and forum
+1. Về thời gian 1 tuần tự tìm hiểu toàn bộ các vấn đề trong bài training thì em nghĩ là hơi thiếu, kể cả có được sự chỉ bảo tận tình của các senpai thì em thấy vẫn phải cần tầm 2 tuần để thẩm thấu phần nào nội dung training. Đây là theo khả năng của em, còn mấy người đầu nhiều sạn thì em ko nói =.=
+2. Phần 1 trong nội dung training là `Cài đặt plugin của Cake: Debug Kit`: em chưa hiểu ý phần này lắm vì cài xong thì trong quá trình training em ko dùng tới.
+3. Phần 2 là về git, phần này em thấy chỉ tập trung vào ssh của git, nhưng đối với người mới học trong khi họ còn chưa biết git là gì và dùng ntn thì có lẽ phần ssh nó vẫn là phần nâng cao. Theo em thì phần này nên **tập trung vào việc tìm hiểu git là gì, dùng các lệnh cơ bản của git ntn ?** github là gì ? ...bla...bla ...
+4. Phần 3: phần này chỉ bảo làm các tuts trên website, việc làm tuts đơn giản chỉ cần copy paste là có thể hoàn thành. Em nghĩ đây là phần chính và là mục tiêu lớn nhất của bài training nên cần phải làm cụ thể hơn. Phần này em kiến nghị nên có những bài tập cụ thể và cơ bản hơn để hiểu rõ các thành phần của cake. Ví dụ như việc đọc document phải đọc kỹ phần Model, Controller, View để hiểu tư tưởng. 
+[Em thấy mấy bài tuts trong link này khá hay cho người mới bắt đầu](http://www.qhonline.info/chuyen-muc/9-cakephp-framework.html)
 
-[GitHub Issues](https://github.com/cakephp/cakephp/issues) - Got issues? Please tell us!
+Tạm thời em mới chỉ nghĩ được đến thế, nếu nghĩ thêm em sẽ bổ xung sau.
 
-[Roadmaps](https://github.com/cakephp/cakephp/wiki#roadmaps) - Want to contribute? Get involved!
+以上です。
 
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
-
-![Cake Power](https://raw.github.com/cakephp/cakephp/master/lib/Cake/Console/Templates/skel/webroot/img/cake.power.gif)

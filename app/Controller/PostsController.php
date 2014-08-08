@@ -23,12 +23,16 @@ class PostsController extends AppController {
 
     //show all posts
     public function index() {
-       $this->paginate = array(
-                                'limit' => 2,
-                                'order' => array('id' => 'desc'),
-                             );
-        $data = $this->paginate("Post");
-        $this->set("posts",$data);
+       // $this->paginate = array(
+       //                          'limit' => 2,
+       //                          'order' => array('id' => 'desc'),
+       //                       );
+       //  $data = $this->paginate("Post");
+       //  $this->set("posts",$data);
+    	$this->set('posts', $this->Post->find('all'));
+        var_dump($this->Post->find('all'));
+        die;
+
     }
 
     //view detail of a post
@@ -47,13 +51,13 @@ class PostsController extends AppController {
     //duplicate post
     public function duplicate() {
         if( $this->request->is('post') ){
+        	$this->autoRender = false;
+    		$this->layout = 'ajax';
         	$id = $this->request->data['id'];
         	$oldPost = $this->Post->findById($id);
 	        $newPost['Post']['title'] = $oldPost['Post']['title'] . " duplicate";
 	    	$this->Post->create();
-	    	$this->Post->save($newPost);
-	    	$this->autoRender = false;
-    		$this->layout = 'ajax';
+	    	$this->Post->save($newPost);	    	
 	  		$result = $this->Post->findById($this->Post->id);
 	  		return json_encode($result);
 	    }
